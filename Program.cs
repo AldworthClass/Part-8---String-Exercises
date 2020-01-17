@@ -16,7 +16,7 @@ namespace Part_8___String_Exercises
             string yearString;
             int year = 1982;
             //Exercise variables
-            string firstName, lastName, studentNumber, username, email, reverseName;
+            string firstName, lastName, studentNumber, username, email, reverseName, reversedName;
 
             //Access by index
             Console.WriteLine("Examples of Length and access by index:");
@@ -66,12 +66,18 @@ namespace Part_8___String_Exercises
             Console.WriteLine("Please enter your student number:");
             //Since there are no requirements specifying this be an integer we can read it in as a string
             studentNumber = Console.ReadLine().Trim();
+
             username = lastName.Substring(0, 3) + firstName.Substring(0, 3) + studentNumber.Substring(studentNumber.Length - 4, 3);
             username = username.ToLower();
+
             email = firstName[0] + lastName + "@parkside.ca";
             email = email.ToLower();
+
             Console.WriteLine("");
             Console.WriteLine($"Welcome {firstName}.  Your username is: {username}, and email is: {email}");
+
+            Console.WriteLine("");
+            Console.WriteLine("");
 
             //Solutions to Exercise 2
             Console.WriteLine("Solution to Exercise 2 - Reverse String");
@@ -79,8 +85,12 @@ namespace Part_8___String_Exercises
             lastName = lastName.ToLower();      
             reverseName = firstName + lastName; //b
 
+            //Using loops
+            reversedName = "";
+            for (int i = 0; i < reverseName.Length; i++)
+                reversedName = reverseName[i] + reversedName;
 
-
+            Console.WriteLine($"Here is {reverseName} reversed: {reversedName}");
 
 
         }
