@@ -27,6 +27,7 @@ namespace Part_8___String_Exercises
 
             //SUBSTRING EXAMPLES
             Console.WriteLine("Examples from Substring Tutorial:");
+            Console.WriteLine("");
             Console.WriteLine(name.Substring(1, name.Length - 2));  //prints all characters except first and last
             Console.WriteLine(name[0] + name.Substring(5, 2));      //prints first, sixth and seventh letters
             yearString = year + "";                                 //converts integer to a string
@@ -59,6 +60,7 @@ namespace Part_8___String_Exercises
 
             //Solutions to Exercise 1
             Console.WriteLine("Solution to Exercise 1 - Username and Email Address");
+            Console.WriteLine("");
             Console.WriteLine("Please enter your first name:");
             firstName = Console.ReadLine().Trim();
             Console.WriteLine("Please enter your last name:");
@@ -67,7 +69,7 @@ namespace Part_8___String_Exercises
             //Since there are no requirements specifying this be an integer we can read it in as a string
             studentNumber = Console.ReadLine().Trim();
 
-            username = lastName.Substring(0, 3) + firstName.Substring(0, 3) + studentNumber.Substring(studentNumber.Length - 4, 3);
+            username = lastName.Substring(0, 3) + firstName.Substring(0, 3) + studentNumber.Substring(studentNumber.Length - 3, 3);
             username = username.ToLower();
 
             email = firstName[0] + lastName + "@parkside.ca";
@@ -81,6 +83,7 @@ namespace Part_8___String_Exercises
 
             //Solutions to Exercise 2
             Console.WriteLine("Solution to Exercise 2 - Reverse String");
+            Console.WriteLine("");
             firstName = firstName.ToUpper();    //a
             lastName = lastName.ToLower();      
             reverseName = firstName + lastName; //b
@@ -91,7 +94,7 @@ namespace Part_8___String_Exercises
                 reversedName = reverseName[i] + reversedName;
 
             Console.WriteLine($"Here is {reverseName} reversed: {reversedName}");
-
+            Console.WriteLine("");
 
         }
     }
