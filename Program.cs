@@ -16,7 +16,7 @@ namespace Part_8___String_Exercises
             string yearString;
             int year = 1982;
             //Exercise variables
-            string firstName, lastName, studentNumber, username, email, reverseName, reversedName;
+            string firstName, lastName, studentNumber, username, email, reverseName, backwards, word;
 
             //Access by index
             Console.WriteLine("Examples of Length and access by index:");
@@ -89,13 +89,34 @@ namespace Part_8___String_Exercises
             reverseName = firstName + lastName; //b
 
             //Using loops
-            reversedName = "";
-            for (int i = 0; i < reverseName.Length; i++)
-                reversedName = reverseName[i] + reversedName;
+            backwards = "";
+            for (int i = 0; i < reverseName.Length; i++)    //loops throguh each character starting at the beginning
+                backwards = reverseName[i] + backwards;     //puts each character at the beginning of the word
 
-            Console.WriteLine($"Here is {reverseName} reversed: {reversedName}");
+            Console.WriteLine($"Here is {reverseName} reversed: {backwards}");
             Console.WriteLine("");
 
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            //Solution to Exercise 3
+            Console.WriteLine("Solution to Exercise 3 - Palindrome Checker");
+            Console.WriteLine("");
+            Console.WriteLine("Please enter a word:");
+            word = Console.ReadLine();
+
+            backwards = "";
+            for (int i = 0; i < word.Length; i++)
+                backwards = word[i] + backwards;
+
+            if (word.Equals(backwards, StringComparison.OrdinalIgnoreCase))
+                Console.WriteLine($"{word} is a palindrome");
+            else
+                Console.WriteLine($"{word} is not a palindrome");
+
+            Console.WriteLine("");
+            Console.WriteLine("Press enter to continue");
+            Console.ReadLine();
         }
     }
 }
